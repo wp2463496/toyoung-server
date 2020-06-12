@@ -1,8 +1,8 @@
 package com.forty7.toyoung.impl;
 
-import com.forty7.toyoung.service.UserService;
 import com.forty7.toyoung.model.User;
 import com.forty7.toyoung.repository.UserMapper;
+import com.forty7.toyoung.service.UserService;
 import com.github.pagehelper.PageHelper;
 import org.springframework.stereotype.Service;
 
