@@ -2,15 +2,14 @@ package com.forty7.toyoung.controller;
 
 import com.forty7.toyoung.model.User;
 import com.forty7.toyoung.service.UserService;
+import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Api(description = "用户API接口")
 @RestController
@@ -18,7 +17,6 @@ import javax.annotation.Resource;
 @RequestMapping("/user")
 public class UserController {
 
-    // 注入mapper类
     @Resource
     private UserService userService;
 
@@ -28,5 +26,14 @@ public class UserController {
         User user = this.userService.getUserById(id);
         return user;
     }
+
+    @ApiOperation(value="用户列表查询", notes="用户列表分页查询", produces="application/json")
+    @RequestMapping(value="", method = RequestMethod.GET)
+    public PageInfo<User> listUser(@RequestParam(value="page", required=false, defaultValue="1") int page, @RequestParam(value="page-size", required=false, defaultValue="5") int pageSize){
+        List<User> result = userService.listUser(page, pageSize);
+        PageInfo<User> pi = new PageInfo<User>(result);
+        return pi;
+    }
+
 
 }
