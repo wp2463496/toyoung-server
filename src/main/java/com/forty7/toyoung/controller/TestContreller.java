@@ -1,5 +1,6 @@
-package com.forty7.toyoung;
+package com.forty7.toyoung.controller;
 
+import com.forty7.toyoung.model.TestBean;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;

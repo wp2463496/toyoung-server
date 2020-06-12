@@ -1,5 +1,6 @@
-package com.forty7.toyoung;
+package com.forty7.toyoung.controller;
 
+import com.forty7.toyoung.model.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -36,10 +37,10 @@ public class JdbcController {
             @Override
             public User mapRow(ResultSet rs, int rowNum) throws SQLException {
                 user = new User();
-                user.setId(rs.getString("id"));
+                user.setId(rs.getLong("id"));
                 user.setName(rs.getString("name"));
                 user.setSex(rs.getString("sex"));
-                user.setAge(rs.getString("age"));
+                user.setAge(rs.getInt("age"));
                 return user;
             }
         });

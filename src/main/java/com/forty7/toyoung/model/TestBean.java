@@ -1,4 +1,4 @@
-package com.forty7.toyoung;
+package com.forty7.toyoung.model;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
