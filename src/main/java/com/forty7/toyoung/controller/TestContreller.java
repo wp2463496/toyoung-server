@@ -37,8 +37,8 @@ public class TestContreller {
     }
 
     @ApiOperation(value="封装返回值结构", notes="封装返回值结构接口")
-    @RequestMapping(value="/result_test", method = RequestMethod.GET, produces="application/json")
-    public ResponseEntity<Result> hello(@RequestParam(value="bad", required=false, defaultValue="false") boolean bad) {
+    @RequestMapping(value="/resultTest", method = RequestMethod.GET, produces="application/json")
+    public ResponseEntity<Result> resultTest(@RequestParam(value="bad", required=false, defaultValue="false") boolean bad) {
         //结果封装类对象
         Result res = new Result(200, "ok");
         if(bad) {
