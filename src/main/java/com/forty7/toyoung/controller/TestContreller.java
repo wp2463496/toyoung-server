@@ -60,4 +60,19 @@ public class TestContreller {
         return ResponseEntity.ok(res);
     }
 
+
+    @ApiOperation(value="不受限访问", notes="不受限访问接口")
+    @RequestMapping(value="/test1", method=RequestMethod.GET)
+    public String test1() {
+        return "test1!";
+    }
+
+    @ApiOperation(value="需要登录访问", notes="需要登录访问接口")
+    @RequestMapping(value="/test2", method=RequestMethod.GET)
+    public String test2() {
+        return "test2!";
+    }
+
+
+
 }

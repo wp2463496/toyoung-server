@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360070a3-035b-477e-9b99-acd2d194efcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/model/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/util/MiscUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/controller/TestContreller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/controller/TestContreller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/forty7/toyoung/controller/TestContreller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/forty7/toyoung/controller/TestContreller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/forty7/toyoung/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/forty7/toyoung/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toyoung-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/toyoung-server.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +124,7 @@
       <workItem from="1591320623136" duration="1004000" />
       <workItem from="1591837253191" duration="993000" />
       <workItem from="1591844555560" duration="8777000" />
-      <workItem from="1592199979731" duration="2785000" />
+      <workItem from="1592199979731" duration="4430000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交">
       <created>1591320959222</created>
@@ -176,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592217510958</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="输入数据校验">
+      <created>1592218826269</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1592218826269</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +196,8 @@
     <MESSAGE value="集成mybatis持久层框架" />
     <MESSAGE value="mybatis generator 配置 完成数据库反射" />
     <MESSAGE value="封装返回结果集" />
-    <option name="LAST_COMMIT_MESSAGE" value="封装返回结果集" />
+    <MESSAGE value="输入数据校验" />
+    <option name="LAST_COMMIT_MESSAGE" value="输入数据校验" />
   </component>
   <component name="WindowStateProjectService">
     <state x="420" y="207" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591153734828">
@@ -209,10 +216,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="690" y="300" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1591957396475" />
-    <state x="452" y="148" key="CommitChangelistDialog2" timestamp="1592217510648">
+    <state x="452" y="148" key="CommitChangelistDialog2" timestamp="1592218826063">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="452" y="148" key="CommitChangelistDialog2/0.23.1920.1057@0.23.1920.1057" timestamp="1592217510648" />
+    <state x="452" y="148" key="CommitChangelistDialog2/0.23.1920.1057@0.23.1920.1057" timestamp="1592218826063" />
     <state width="474" height="466" key="DebuggerActiveHint" timestamp="1591938210844">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -221,38 +228,38 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="184" y="113" key="DiffContextDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1591844374274" />
-    <state width="1644" height="204" key="GridCell.Tab.0.bottom" timestamp="1592218761736">
+    <state width="1644" height="204" key="GridCell.Tab.0.bottom" timestamp="1592297124632">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1592218761736" />
-    <state width="1644" height="204" key="GridCell.Tab.0.center" timestamp="1592218761735">
+    <state width="1644" height="204" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1592297124632" />
+    <state width="1644" height="204" key="GridCell.Tab.0.center" timestamp="1592297124632">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1592218761735" />
-    <state width="1644" height="204" key="GridCell.Tab.0.left" timestamp="1592218761735">
+    <state width="1644" height="204" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1592297124632" />
+    <state width="1644" height="204" key="GridCell.Tab.0.left" timestamp="1592297124631">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1592218761735" />
-    <state width="1644" height="204" key="GridCell.Tab.0.right" timestamp="1592218761736">
+    <state width="1644" height="204" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1592297124631" />
+    <state width="1644" height="204" key="GridCell.Tab.0.right" timestamp="1592297124632">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1592218761736" />
-    <state width="1644" height="204" key="GridCell.Tab.1.bottom" timestamp="1592218761738">
+    <state width="1644" height="204" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1592297124632" />
+    <state width="1644" height="204" key="GridCell.Tab.1.bottom" timestamp="1592297124634">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.1.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1592218761738" />
-    <state width="1644" height="204" key="GridCell.Tab.1.center" timestamp="1592218761738">
+    <state width="1644" height="204" key="GridCell.Tab.1.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1592297124634" />
+    <state width="1644" height="204" key="GridCell.Tab.1.center" timestamp="1592297124633">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.1.center/0.23.1920.1057@0.23.1920.1057" timestamp="1592218761738" />
-    <state width="1644" height="204" key="GridCell.Tab.1.left" timestamp="1592218761737">
+    <state width="1644" height="204" key="GridCell.Tab.1.center/0.23.1920.1057@0.23.1920.1057" timestamp="1592297124633" />
+    <state width="1644" height="204" key="GridCell.Tab.1.left" timestamp="1592297124633">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.1.left/0.23.1920.1057@0.23.1920.1057" timestamp="1592218761737" />
-    <state width="1644" height="204" key="GridCell.Tab.1.right" timestamp="1592218761738">
+    <state width="1644" height="204" key="GridCell.Tab.1.left/0.23.1920.1057@0.23.1920.1057" timestamp="1592297124633" />
+    <state width="1644" height="204" key="GridCell.Tab.1.right" timestamp="1592297124634">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.1.right/0.23.1920.1057@0.23.1920.1057" timestamp="1592218761738" />
+    <state width="1644" height="204" key="GridCell.Tab.1.right/0.23.1920.1057@0.23.1920.1057" timestamp="1592297124634" />
     <state width="1644" height="334" key="GridCell.Tab.2.bottom" timestamp="1591964316608">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -277,10 +284,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="440" y="127" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1591844534517" />
-    <state x="552" y="286" key="Vcs.Push.Dialog.v2" timestamp="1592217670429">
+    <state x="552" y="286" key="Vcs.Push.Dialog.v2" timestamp="1592218827335">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="552" y="286" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1592217670429" />
+    <state x="552" y="286" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1592218827335" />
     <state x="209" y="146" width="1486" height="800" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1591957617829">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
