@@ -142,7 +142,7 @@
       <workItem from="1592199979731" duration="5065000" />
       <workItem from="1592644770099" duration="548000" />
       <workItem from="1592874316147" duration="1616000" />
-      <workItem from="1592968558949" duration="3073000" />
+      <workItem from="1592968558949" duration="3308000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交">
       <created>1591320959222</created>
@@ -207,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592297194746</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="集成Jwt，赋能用户权限、角色权限管理">
+      <created>1592992920863</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1592992920863</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +230,8 @@
     <MESSAGE value="封装返回结果集" />
     <MESSAGE value="输入数据校验" />
     <MESSAGE value="集成security安全策略" />
-    <option name="LAST_COMMIT_MESSAGE" value="集成security安全策略" />
+    <MESSAGE value="集成Jwt，赋能用户权限、角色权限管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="集成Jwt，赋能用户权限、角色权限管理" />
   </component>
   <component name="WindowStateProjectService">
     <state x="420" y="207" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591153734828">
@@ -242,10 +250,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="690" y="300" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1591957396475" />
-    <state x="452" y="148" key="CommitChangelistDialog2" timestamp="1592297194449">
+    <state x="452" y="148" key="CommitChangelistDialog2" timestamp="1592993010112">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="452" y="148" key="CommitChangelistDialog2/0.23.1920.1057@0.23.1920.1057" timestamp="1592297194449" />
+    <state x="452" y="148" key="CommitChangelistDialog2/0.23.1920.1057@0.23.1920.1057" timestamp="1592993010112" />
     <state width="474" height="466" key="DebuggerActiveHint" timestamp="1591938210844">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -310,10 +318,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="440" y="127" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1591844534517" />
-    <state x="552" y="286" key="Vcs.Push.Dialog.v2" timestamp="1592297195951">
+    <state x="552" y="286" key="Vcs.Push.Dialog.v2" timestamp="1592992922824">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="552" y="286" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1592297195951" />
+    <state x="552" y="286" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1592992922824" />
     <state x="209" y="146" width="1486" height="800" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1592992661386">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
