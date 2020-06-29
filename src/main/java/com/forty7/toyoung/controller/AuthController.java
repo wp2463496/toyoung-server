@@ -82,4 +82,17 @@ public class AuthController {
     }
 
 
+    /**
+     * 异常封装返回示例
+     * @param register
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value = "/register_eh", method = RequestMethod.POST, produces="application/json")
+    public ResponseEntity<Result> register(@Valid @RequestBody RegisterRequest register) throws Exception {
+        Result res = new Result(200, "ok");
+        return ResponseEntity.ok(res);
+    }
+
+
 }

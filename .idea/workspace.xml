@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="360070a3-035b-477e-9b99-acd2d194efcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/auth/AuthUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/auth/AuthUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/auth/JwtAuthError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/auth/JwtAuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/controller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/impl/AuthServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/model/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/model/Results.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/util/JwtUtil.java" afterDir="false" />
+    <list default="true" id="360070a3-035b-477e-9b99-acd2d194efcf" name="Default Changelist" comment="集成Jwt，赋能用户权限、角色权限管理">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/config/InterceptorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/util/ErrorHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/util/MiscUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/forty7/toyoung/util/MiscUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toyoung-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/toyoung-server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +130,8 @@
       <workItem from="1592199979731" duration="5065000" />
       <workItem from="1592644770099" duration="548000" />
       <workItem from="1592874316147" duration="1616000" />
-      <workItem from="1592968558949" duration="3308000" />
+      <workItem from="1592968558949" duration="3428000" />
+      <workItem from="1593426609061" duration="3285000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交">
       <created>1591320959222</created>
@@ -214,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592992920863</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="集成Jwt，赋能用户权限、角色权限管理">
+      <created>1592993019838</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1592993019838</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,10 +246,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="690" y="300" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1591957396475" />
-    <state x="452" y="148" key="CommitChangelistDialog2" timestamp="1592993010112">
+    <state x="452" y="148" key="CommitChangelistDialog2" timestamp="1593430050802">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="452" y="148" key="CommitChangelistDialog2/0.23.1920.1057@0.23.1920.1057" timestamp="1592993010112" />
+    <state x="452" y="148" key="CommitChangelistDialog2/0.23.1920.1057@0.23.1920.1057" timestamp="1593430050802" />
     <state width="474" height="466" key="DebuggerActiveHint" timestamp="1591938210844">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -262,38 +258,38 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="184" y="113" key="DiffContextDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1592992655882" />
-    <state width="1644" height="204" key="GridCell.Tab.0.bottom" timestamp="1592992670145">
+    <state width="1644" height="204" key="GridCell.Tab.0.bottom" timestamp="1593429640487">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1592992670145" />
-    <state width="1644" height="204" key="GridCell.Tab.0.center" timestamp="1592992670145">
+    <state width="1644" height="204" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1593429640487" />
+    <state width="1644" height="204" key="GridCell.Tab.0.center" timestamp="1593429640485">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1592992670145" />
-    <state width="1644" height="204" key="GridCell.Tab.0.left" timestamp="1592992670144">
+    <state width="1644" height="204" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1593429640485" />
+    <state width="1644" height="204" key="GridCell.Tab.0.left" timestamp="1593429640485">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1592992670144" />
-    <state width="1644" height="204" key="GridCell.Tab.0.right" timestamp="1592992670145">
+    <state width="1644" height="204" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1593429640485" />
+    <state width="1644" height="204" key="GridCell.Tab.0.right" timestamp="1593429640486">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1592992670145" />
-    <state width="1644" height="204" key="GridCell.Tab.1.bottom" timestamp="1592992670147">
+    <state width="1644" height="204" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1593429640486" />
+    <state width="1644" height="204" key="GridCell.Tab.1.bottom" timestamp="1593429640489">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.1.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1592992670147" />
-    <state width="1644" height="204" key="GridCell.Tab.1.center" timestamp="1592992670146">
+    <state width="1644" height="204" key="GridCell.Tab.1.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1593429640489" />
+    <state width="1644" height="204" key="GridCell.Tab.1.center" timestamp="1593429640488">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.1.center/0.23.1920.1057@0.23.1920.1057" timestamp="1592992670146" />
-    <state width="1644" height="204" key="GridCell.Tab.1.left" timestamp="1592992670146">
+    <state width="1644" height="204" key="GridCell.Tab.1.center/0.23.1920.1057@0.23.1920.1057" timestamp="1593429640488" />
+    <state width="1644" height="204" key="GridCell.Tab.1.left" timestamp="1593429640487">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.1.left/0.23.1920.1057@0.23.1920.1057" timestamp="1592992670146" />
-    <state width="1644" height="204" key="GridCell.Tab.1.right" timestamp="1592992670147">
+    <state width="1644" height="204" key="GridCell.Tab.1.left/0.23.1920.1057@0.23.1920.1057" timestamp="1593429640487" />
+    <state width="1644" height="204" key="GridCell.Tab.1.right" timestamp="1593429640488">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1644" height="204" key="GridCell.Tab.1.right/0.23.1920.1057@0.23.1920.1057" timestamp="1592992670147" />
+    <state width="1644" height="204" key="GridCell.Tab.1.right/0.23.1920.1057@0.23.1920.1057" timestamp="1593429640488" />
     <state width="1644" height="334" key="GridCell.Tab.2.bottom" timestamp="1591964316608">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -318,13 +314,21 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="440" y="127" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1591844534517" />
-    <state x="552" y="286" key="Vcs.Push.Dialog.v2" timestamp="1592992922824">
+    <state x="552" y="286" key="Vcs.Push.Dialog.v2" timestamp="1592993021115">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="552" y="286" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1592992922824" />
+    <state x="552" y="286" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1592993021115" />
     <state x="209" y="146" width="1486" height="800" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1592992661386">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="209" y="146" width="1486" height="800" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1592992661386" />
+    <state x="730" y="294" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1593428962499">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="730" y="294" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1593428962499" />
+    <state x="631" y="302" width="639" height="486" key="find.popup" timestamp="1593428925212">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="631" y="302" width="639" height="486" key="find.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1593428925212" />
   </component>
 </project>
