@@ -22,15 +22,16 @@ import java.util.Map;
 @RequestMapping("/toyoung")
 public class TestContreller {
 
-    @ApiOperation(value="测试查询Get", notes="测试查询接口", produces="application/json")
+    @ApiOperation(value="测试查询Get", notes="测试查询接口")
     @ApiImplicitParam(name = "text", value = "内容（必填）", paramType = "query", required = true, dataType = "String")
-    @RequestMapping(value="/testGet", method = RequestMethod.GET)
+    @RequestMapping(value="/testGet", method = RequestMethod.GET, produces="application/json")
     private String testGet(@RequestParam(name = "text", required = true) String text){
         return "get返回" + text + "测试";
     }
 
-    @ApiOperation(value="测试查询Post", notes="测试查询接口", produces="application/json")
-    @RequestMapping(value="/testPost", method = RequestMethod.POST)
+    //返回值乱码或者问号的问题 produces="application/json" 需要写在RequestMapping上
+    @ApiOperation(value="测试查询Post", notes="测试查询接口")
+    @RequestMapping(value="/testPost", method = RequestMethod.POST, produces="application/json")
     @ApiParam()
     private String testPost(@RequestBody @ApiParam(name="提交参数",value="text",required = false) TestBean test){
         return "post返回" + test.getText() + "测试";
