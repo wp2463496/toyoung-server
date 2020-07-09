@@ -19,8 +19,6 @@ public class LoginRequest {
     @Size(min=6, max=16, message="密码6~16位")
     private String password;
 
-    private boolean rememberMe;
-
     public String getAccount() {
         return account;
     }
@@ -32,12 +30,6 @@ public class LoginRequest {
     }
     public void setPassword(String password) {
         this.password = password;
-    }
-    public boolean isRememberMe() {
-        return rememberMe;
-    }
-    public void setRememberMe(boolean rememberMe) {
-        this.rememberMe = rememberMe;
     }
 
 }
