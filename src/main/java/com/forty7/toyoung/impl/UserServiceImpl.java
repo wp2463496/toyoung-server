@@ -4,6 +4,9 @@ import com.forty7.toyoung.model.User;
 import com.forty7.toyoung.repository.UserMapper;
 import com.forty7.toyoung.service.UserService;
 import com.github.pagehelper.PageHelper;
+import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -34,5 +37,19 @@ public class UserServiceImpl implements UserService {
         return result;
     }
 
+
+    private static final org.slf4j.Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
+    private User user = new User(1l, "abc1", "13512345678", "123456", "role-user");
+    @Cacheable(value = "user", key= "#id")
+    public User getUserByIdCache(long id) {
+        log.info("加载用户信息");
+        return user;
+    }
+
+    @CacheEvict(value = "user", key= "#id")
+    public User updateUserNicknameCache(long id, String nickname) {
+        user.setNickname(nickname);
+        return user;
+    }
 
 }
